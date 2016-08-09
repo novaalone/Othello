@@ -1,0 +1,123 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:orientation="vertical"
+    android:background="@drawable/mainpage"
+   >
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:background="@color/back4">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/btn_newGame"
+        android:layout_alignParentLeft="true"
+
+        android:background="@drawable/mainbtn"
+android:textColor="@color/fontcolor"
+        android:text="@string/new_game"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/turn"
+            android:textColor="@color/fontcolor"
+            android:id="@+id/tv_turn"
+            android:textSize="24sp"
+            android:layout_marginRight="5dp"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/img_turn"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="@string/hint_off"
+        android:id="@+id/btn_hint"
+android:background="@drawable/mainbtn"
+        android:textColor="@color/fontcolor"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+
+
+        />
+
+
+</RelativeLayout>
+
+
+<com.ma.nova.othello_try_3.GameView
+    android:layout_width="fill_parent"
+    android:layout_height="0dp"
+android:layout_weight="1"
+    android:id="@+id/gameView"
+    >
+
+
+</com.ma.nova.othello_try_3.GameView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@color/back4">
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="2"
+                android:textSize="24sp"
+                android:id="@+id/black_count"
+                android:background="@drawable/black_chess"
+                android:textColor="@color/num"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+           <Button
+               android:layout_marginBottom="10dp"
+               android:layout_marginRight="10dp"
+               android:layout_marginLeft="10dp"
+               android:layout_width="50dp"
+               android:layout_height="50dp"
+               android:text="2"
+               android:textSize="24sp"
+               android:id="@+id/white_count"
+               android:textColor="@color/num"
+               android:background="@drawable/white_chess"
+               android:layout_toRightOf="@id/black_count"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time"
+            android:textColor="@color/fontcolor"
+            android:textSize="24sp"
+            android:text="@string/defaulttime"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+        />
+
+    </RelativeLayout>
+</LinearLayout>
